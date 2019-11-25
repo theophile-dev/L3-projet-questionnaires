@@ -2,7 +2,7 @@ package fil.coo;
 
 public class YesNoAnswer extends Answer<YesNo> {
 
-	public static final TextAnswerValidator answerValidator = new TextAnswerValidator();
+	public static final YesNoValidator answerValidator = new YesNoValidator();
 	
 	public YesNoAnswer(YesNo answerContent) {
 		super(answerContent);

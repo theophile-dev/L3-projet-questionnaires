@@ -7,11 +7,6 @@ public class TextAnswer extends Answer<String> {
 	}
 
 	@Override
-	public boolean accept(String answer) {
-		return true;
-	}
-
-	@Override
 	public boolean correctAnswer(String answer) {
 		
 		return false;

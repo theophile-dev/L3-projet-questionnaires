@@ -1,4 +1,5 @@
-package fil.coo;
+package fil.coo.answer_validator;
+import fil.coo.YesNo;
 
 public class YesNoValidator extends AnswerValidator {
 

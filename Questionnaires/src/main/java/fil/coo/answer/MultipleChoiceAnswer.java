@@ -1,8 +1,13 @@
-package fil.coo;
+package fil.coo.answer;
 
 import java.util.ArrayList;
 
+import fil.coo.answer_validator.MultipleChoiceAnswerValidator;
+
+
 public class MultipleChoiceAnswer extends Answer<ArrayList<Answer<?>>> {
+	
+	public static final MultipleChoiceAnswerValidator answerValidator = new MultipleChoiceAnswerValidator();
 
 	public MultipleChoiceAnswer(ArrayList<Answer<?>> answerContent) {
 		super(answerContent);

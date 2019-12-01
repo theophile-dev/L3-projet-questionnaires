@@ -1,4 +1,4 @@
-package fil.coo;
+package fil.coo.answer_validator;
 
 public class TextAnswerValidator extends AnswerValidator {
 

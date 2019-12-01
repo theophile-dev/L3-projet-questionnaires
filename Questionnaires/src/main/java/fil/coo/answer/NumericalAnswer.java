@@ -1,4 +1,6 @@
-package fil.coo;
+package fil.coo.answer;
+
+import fil.coo.answer_validator.NumericalAnswerValidator;
 
 public class NumericalAnswer extends Answer<Integer> {
 
@@ -11,7 +13,11 @@ public class NumericalAnswer extends Answer<Integer> {
 
 	@Override
 	public boolean correctAnswer(String answer) {
+		if (answerValidator.accept(answer)) {
 		return Integer.parseInt(answer) == this.getAnswerContent();
+		} else {
+			return false;
+		}
 	}
-
+	
 }

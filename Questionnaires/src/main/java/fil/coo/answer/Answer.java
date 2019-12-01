@@ -1,15 +1,20 @@
-package fil.coo;
+package fil.coo.answer;
 
+import fil.coo.answer_validator.AnswerValidator;
+/**
+ * You need to have a static member called answerValidator 
+ * in each subclass to shadow this abstract AnswerValidator	
+ * @author theophile
+ *
+ * @param <T> the type of content the answer allows
+ */
 public abstract class Answer<T> {
 		
 	private T answerContent;
 	private int point;
 	
-	/*
-	 * You need to have a static member called answerValidator
-	 * in each subclass to shadow this abstract AnswerValidator
-	 */
-	public  static AnswerValidator answerValidator;
+
+	public static AnswerValidator answerValidator;
 	
 	public int getPoint() {
 		return point;

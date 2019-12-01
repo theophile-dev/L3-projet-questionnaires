@@ -1,9 +1,13 @@
-package fil.coo;
+package fil.coo.answer;
 
 import java.util.ArrayList;
 
+import fil.coo.answer_validator.MultipleCorrectAnswerValidator;
+
 public class MultipleCorrectAnswer extends Answer<ArrayList<Answer<?>>> {
 
+	public static final MultipleCorrectAnswerValidator answerValidator = new MultipleCorrectAnswerValidator();
+	
 	public MultipleCorrectAnswer(ArrayList<Answer<?>> answerContent) {
 		super(answerContent);
 	}
@@ -18,5 +22,5 @@ public class MultipleCorrectAnswer extends Answer<ArrayList<Answer<?>>> {
 		}
 		return false;
 	}
-
+	
 }

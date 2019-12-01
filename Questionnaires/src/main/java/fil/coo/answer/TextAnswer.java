@@ -1,4 +1,6 @@
-package fil.coo;
+package fil.coo.answer;
+
+import fil.coo.answer_validator.TextAnswerValidator;
 
 public class TextAnswer extends Answer<String> {
 	
@@ -10,8 +12,7 @@ public class TextAnswer extends Answer<String> {
 
 	@Override
 	public boolean correctAnswer(String answer) {
-		
-		return false;
+		return answer.contentEquals(getAnswerContent());
 	}
-
+	
 }

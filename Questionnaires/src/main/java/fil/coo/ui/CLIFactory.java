@@ -1,5 +1,11 @@
 package fil.coo.ui;
 
+import fil.coo.ui.cli.MultipleChoiceAnswerCLI;
+import fil.coo.ui.cli.MultipleCorrectAnswerCLI;
+import fil.coo.ui.cli.NumericalAnswerCLI;
+import fil.coo.ui.cli.TextAnswerCLI;
+import fil.coo.ui.cli.YesNoAnswerCLI;
+
 public class CLIFactory extends UIFactory {
 	
 	private static CLIFactory factoryInstance = null;
@@ -16,32 +22,27 @@ public class CLIFactory extends UIFactory {
 
 	@Override
 	public MultipleChoiceAnswerUI getMultipleChoiceAnswerUI() {
-		// TODO Auto-generated method stub
-		return null;
+		return new MultipleChoiceAnswerCLI();
 	}
 
 	@Override
 	public MultipleCorrectAnswerUI getMultipleCorrectAnswerUI() {
-		// TODO Auto-generated method stub
-		return null;
+		return new MultipleCorrectAnswerCLI();
 	}
 
 	@Override
 	public NumericalAnswerUI getNumericalAnswerUI() {
-		// TODO Auto-generated method stub
-		return null;
+		return new NumericalAnswerCLI();
 	}
 
 	@Override
 	public TextAnswerUI getTextAnswerUI() {
-		// TODO Auto-generated method stub
-		return null;
+		return new TextAnswerCLI();
 	}
 
 	@Override
 	public YesNoAnswerUI getYesNoAnswerUI() {
-		// TODO Auto-generated method stub
-		return null;
+		return new YesNoAnswerCLI();
 	}
 
 }

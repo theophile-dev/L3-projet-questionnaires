@@ -20,5 +20,10 @@ public class YesNoAnswer extends Answer<YesNo> {
 			return false;
 		}
 	}
+
+	@Override
+	public String answerContentToString() {
+		return this.getAnswerContent().toString();
+	}
 	
 }

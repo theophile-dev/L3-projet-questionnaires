@@ -24,4 +24,13 @@ public class MultipleCorrectAnswer extends Answer<ArrayList<Answer<?>>> {
 		return false;
 	}
 	
+	@Override
+	public String answerContentToString() {
+		String res = "|";
+		for(Answer<?> answer: this.getAnswerContent()) {
+			res+= answer.answerContentToString()+ "|";
+		}
+		return res;
+	}
+	
 }

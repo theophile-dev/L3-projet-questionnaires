@@ -28,7 +28,9 @@ public abstract class Answer<T> {
 	public void setPoint(int point) {
 		this.point = point;
 	}
-
+	
+	public abstract String answerContentToString();
+	
 	public T getAnswerContent() {
 		return answerContent;
 	}

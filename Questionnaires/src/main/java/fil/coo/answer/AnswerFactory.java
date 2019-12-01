@@ -10,7 +10,7 @@ public class AnswerFactory {
 	
 	public final static AnswerFactory FACTORY = new AnswerFactory();
 	
-
+	private AnswerFactory() {}
 	/**
 	 * 
 	 * @param answer A string representing an answer

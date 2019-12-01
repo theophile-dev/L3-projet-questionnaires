@@ -1,6 +1,6 @@
 package fil.coo.answer;
 
-import fil.coo.ui.TextAnswerCLI;
+import fil.coo.ui.cli.TextAnswerCLI;
 
 public class TextAnswerTest extends AnswerTest {
 	

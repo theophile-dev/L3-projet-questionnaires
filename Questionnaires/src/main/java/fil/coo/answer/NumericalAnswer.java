@@ -20,5 +20,10 @@ public class NumericalAnswer extends Answer<Integer> {
 			return false;
 		}
 	}
+
+	@Override
+	public String answerContentToString() {
+		return this.getAnswerContent().toString();
+	}
 	
 }

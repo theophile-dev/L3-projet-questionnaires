@@ -12,12 +12,22 @@ public class MultipleChoiceAnswer extends Answer<ArrayList<Answer<?>>> {
 
 	public MultipleChoiceAnswer(ArrayList<Answer<?>> answerContent,MultipleChoiceAnswerUI multipleChoiceAnswerUI) {
 		super(answerContent, multipleChoiceAnswerUI);
+		multipleChoiceAnswerUI.setContent(answerContent);
 	}
 
 	@Override
 	public boolean correctAnswer(String answer) {
 		Answer<?> correctAnswer = this.getAnswerContent().get(0);
 		return correctAnswer.correctAnswer(answer);
+	}
+
+	@Override
+	public String answerContentToString() {
+		String res = ";";
+		for(Answer<?> answer: this.getAnswerContent()) {
+			res+= answer.answerContentToString()+ ";";
+		}
+		return res;
 	}
 
 }

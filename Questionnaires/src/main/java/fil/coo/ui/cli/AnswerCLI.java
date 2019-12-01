@@ -1,6 +1,8 @@
-package fil.coo.ui;
+package fil.coo.ui.cli;
 
 import java.util.Scanner;
+
+import fil.coo.ui.AnswerUI;
 
 public class AnswerCLI extends AnswerUI {
 	

@@ -1,6 +1,7 @@
-package fil.coo;
+package fil.coo.Question;
 
 import fil.coo.answer.Answer;
+import fil.coo.ui.UI;
 
 public class Question {
 	
@@ -11,21 +12,18 @@ public class Question {
 		this.question = question;
 		this.answer = answer;
 	}
+	
 	/**
 	 * Ask the question to the user
 	 * @return number of point earned
 	 */
 	public  int askQuestion() {
-		return 0;
-		
+		UI userInterface = this.answer.getUserInterface();
+		userInterface.displayQuestion();
+		if (this.answer.correctAnswer(userInterface.getUserAnswer())) {
+			return this.answer.getPoint();
+		} else {
+			return 0;
+		}			
 	}
-		
-	public String getQuestion() {
-		return question;
-	}
-
-	public Answer<?> getAnswer() {
-		return answer;
-	}
-
 }

@@ -3,16 +3,19 @@ package fil.coo.answer;
 import java.util.ArrayList;
 
 import fil.coo.YesNo;
-
+import fil.coo.ui.cli.MultipleCorrectAnswerCLI;
+import fil.coo.ui.cli.TextAnswerCLI;
+import fil.coo.ui.cli.YesNoAnswerCLI;
+import fil.coo.ui.cli.NumericalAnswerCLI;
 public class MultipleCorrectAnswerTest extends AnswerTest {
 
 	@Override
 	protected Answer<?> getAnswerInstance() {
 		ArrayList<Answer<?>> answers = new ArrayList<Answer<?>>();
-		answers.add(new NumericalAnswer(6));
-		answers.add(new TextAnswer("test"));
-		answers.add(new YesNoAnswer(YesNo.Yes));
-		return new MultipleCorrectAnswer(answers);
+		answers.add(new NumericalAnswer(6, new NumericalAnswerCLI()));
+		answers.add(new TextAnswer("test", new TextAnswerCLI()));
+		answers.add(new YesNoAnswer(YesNo.Yes, new YesNoAnswerCLI()));
+		return new MultipleCorrectAnswer(answers, new MultipleCorrectAnswerCLI());
 	}
 
 	@Override

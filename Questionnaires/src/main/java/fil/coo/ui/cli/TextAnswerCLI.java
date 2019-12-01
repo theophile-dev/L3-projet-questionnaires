@@ -1,4 +1,6 @@
-package fil.coo.ui;
+package fil.coo.ui.cli;
+
+import fil.coo.ui.TextAnswerUI;
 
 public class TextAnswerCLI extends AnswerCLI implements TextAnswerUI {
 
@@ -7,5 +9,7 @@ public class TextAnswerCLI extends AnswerCLI implements TextAnswerUI {
 		super.displayQuestion();
 		System.out.println("the expected answer is a text");
 	}
+	
+	
 	
 }

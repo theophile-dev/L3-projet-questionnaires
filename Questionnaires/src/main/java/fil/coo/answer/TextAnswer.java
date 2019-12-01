@@ -15,5 +15,12 @@ public class TextAnswer extends Answer<String> {
 	public boolean correctAnswer(String answer) {
 		return answer.contentEquals(getAnswerContent());
 	}
+
+	@Override
+	public String answerContentToString() {
+		return this.getAnswerContent();
+	}
+	
+	
 	
 }

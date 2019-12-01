@@ -1,5 +1,7 @@
 package fil.coo.answer;
 
+import fil.coo.ui.TextAnswerCLI;
+
 public class TextAnswerTest extends AnswerTest {
 	
 
@@ -7,7 +9,7 @@ public class TextAnswerTest extends AnswerTest {
 	
 	@Override
 	protected Answer<?> getAnswerInstance() {
-		return new TextAnswer(text);
+		return new TextAnswer(text, new TextAnswerCLI());
 	}
 
 	@Override

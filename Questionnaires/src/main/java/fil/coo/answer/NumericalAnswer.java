@@ -1,13 +1,14 @@
 package fil.coo.answer;
 
 import fil.coo.answer_validator.NumericalAnswerValidator;
+import fil.coo.ui.NumericalAnswerUI;
 
 public class NumericalAnswer extends Answer<Integer> {
 
 	public static final NumericalAnswerValidator answerValidator = new NumericalAnswerValidator();
 	
-	public NumericalAnswer(Integer answerContent) {
-		super(answerContent);
+	public NumericalAnswer(Integer answerContent, NumericalAnswerUI numericalAnswerUI) {
+		super(answerContent, numericalAnswerUI);
 	}
 
 

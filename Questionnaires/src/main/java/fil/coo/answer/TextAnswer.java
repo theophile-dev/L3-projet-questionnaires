@@ -1,13 +1,14 @@
 package fil.coo.answer;
 
 import fil.coo.answer_validator.TextAnswerValidator;
+import fil.coo.ui.TextAnswerUI;
 
 public class TextAnswer extends Answer<String> {
 	
 	public static final TextAnswerValidator answerValidator = new TextAnswerValidator();
 
-	public TextAnswer(String answerContent) {
-		super(answerContent);
+	public TextAnswer(String answerContent, TextAnswerUI textAnswerUI) {
+		super(answerContent, textAnswerUI);
 	}
 
 	@Override

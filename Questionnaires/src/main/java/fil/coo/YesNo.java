@@ -2,5 +2,8 @@ package fil.coo;
 
 public enum YesNo {
 	Yes,
-	No;
+	No,
+	oui,
+	non;
+	
 }

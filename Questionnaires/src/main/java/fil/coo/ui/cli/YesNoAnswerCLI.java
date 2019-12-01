@@ -6,7 +6,7 @@ public class YesNoAnswerCLI extends AnswerCLI implements YesNoAnswerUI {
 	@Override
 	public void displayQuestion() {
 		super.displayQuestion();
-		System.out.println("the expected answer is Yes or No");
+		System.out.println("the expected answer is Yes or No ( oui ou non dans le cas de l'exemple )");
 	}
 	
 	

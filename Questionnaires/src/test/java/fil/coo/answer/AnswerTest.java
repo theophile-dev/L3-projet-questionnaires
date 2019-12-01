@@ -3,7 +3,7 @@ package fil.coo.answer;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import fil.coo.ui.CLIFactory;
+import fil.coo.ui.cli.CLIFactory;
 
 public abstract class AnswerTest {
 

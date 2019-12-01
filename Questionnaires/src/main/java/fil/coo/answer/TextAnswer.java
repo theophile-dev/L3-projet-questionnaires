@@ -13,7 +13,8 @@ public class TextAnswer extends Answer<String> {
 
 	@Override
 	public boolean correctAnswer(String answer) {
-		return answer.contentEquals(getAnswerContent());
+		return answer.replaceAll("\\s+","").toLowerCase().contentEquals(
+				getAnswerContent().replaceAll("\\s+","").toLowerCase());
 	}
 
 	@Override

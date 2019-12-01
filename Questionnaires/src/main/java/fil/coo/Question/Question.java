@@ -7,10 +7,16 @@ public class Question {
 	
 	private String question;
 	private Answer<?> answer;
+	private int maxPoints;
 	
+	public int getMaxPoints() {
+		return maxPoints;
+	}
+
 	public Question(String question, Answer<?> answer) {
 		this.question = question;
 		this.answer = answer;
+		this.maxPoints = answer.getPoint();
 	}
 	
 	/**
@@ -19,6 +25,7 @@ public class Question {
 	 */
 	public  int askQuestion() {
 		UI userInterface = this.answer.getUserInterface();
+		userInterface.setQuestionText(question);
 		userInterface.displayQuestion();
 		if (this.answer.correctAnswer(userInterface.getUserAnswer())) {
 			return this.answer.getPoint();

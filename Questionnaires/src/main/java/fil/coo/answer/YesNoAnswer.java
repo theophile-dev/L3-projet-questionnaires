@@ -14,8 +14,9 @@ public class YesNoAnswer extends Answer<YesNo> {
 
 	@Override
 	public boolean correctAnswer(String answer) {
-		if (answerValidator.accept(answer)) {
-		return this.getAnswerContent() == YesNo.valueOf(answer);
+		String answerWithoutSpace = answer.replaceAll("\\s+","");
+		if (answerValidator.accept(answerWithoutSpace)) {
+		return this.getAnswerContent() == YesNo.valueOf(answerWithoutSpace);
 		} else {
 			return false;
 		}

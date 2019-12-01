@@ -1,10 +1,11 @@
-package fil.coo.ui;
+package fil.coo.ui.cli;
 
-import fil.coo.ui.cli.MultipleChoiceAnswerCLI;
-import fil.coo.ui.cli.MultipleCorrectAnswerCLI;
-import fil.coo.ui.cli.NumericalAnswerCLI;
-import fil.coo.ui.cli.TextAnswerCLI;
-import fil.coo.ui.cli.YesNoAnswerCLI;
+import fil.coo.ui.MultipleChoiceAnswerUI;
+import fil.coo.ui.MultipleCorrectAnswerUI;
+import fil.coo.ui.NumericalAnswerUI;
+import fil.coo.ui.TextAnswerUI;
+import fil.coo.ui.UIFactory;
+import fil.coo.ui.YesNoAnswerUI;
 
 public class CLIFactory extends UIFactory {
 	
@@ -43,6 +44,11 @@ public class CLIFactory extends UIFactory {
 	@Override
 	public YesNoAnswerUI getYesNoAnswerUI() {
 		return new YesNoAnswerCLI();
+	}
+
+	@Override
+	public void displayScore(int score, int maxScore) {
+		System.out.println("You score : " + score + "/" + maxScore);
 	}
 
 }

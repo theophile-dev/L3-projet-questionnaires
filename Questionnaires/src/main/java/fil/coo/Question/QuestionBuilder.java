@@ -26,7 +26,6 @@ public class QuestionBuilder {
 			String questionText = null;
 			Answer<?> answer = null;
 			while ((line != null) && (line.length()>0)) {
-				System.out.println(line);
 				switch(action) {
 				case 0:
 					questionText = line;
@@ -37,10 +36,10 @@ public class QuestionBuilder {
 				case 2:
 					action = -1;
 					answer.setPoint(Integer.parseInt(line));
+					questions.add(new Question(questionText, answer));
 					break;
 				}
 				action++;
-				questions.add(new Question(questionText, answer));
 				line = reader.readLine();
 			}
 			reader.close();
